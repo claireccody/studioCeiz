@@ -8,6 +8,15 @@
   <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
   <style>
 
+        @font-face{
+      font-family: 'MyScript';
+      src: url(./MyScript_num-Regular.ttf) format('truetype');
+      font-weight: normal;
+    font-style: normal;
+    }
+    .myScript{
+      font-family: 'MyScript', sans-serif;
+    }
     *{
       box-sizing: border-box;
     }
@@ -151,7 +160,7 @@
       <figure class="logo__img--wrapper">
         <img src="./personal-logo.png" alt="" class="logo__img">
       </figure>
-      <h1 style="text-shadow: 0 0 4px #190c5d;">Claire Cody</h1>
+      <h1 class="myScript" style="text-shadow: 0 0 4px #190c5d;">Claire Cody</h1>
     </div>
     <div class="sections">
       <ul class="links">
@@ -211,7 +220,7 @@
     </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="myScript">
       <h2>About <span style="color:#190c5def; text-decoration: underline;">Claire Cody</span></h2>
       <p style="text-align: center;">
         I’m a <span class="purple">creative technologist & digital designer</span> with a background in <span class="purple">front-end development, 
@@ -227,8 +236,8 @@
   </main>
   <footer >
     <a class="cta purple contact" href="mailto:studioceiz.contact@gmail.com">Start a project!</a>
-    <p> &copy Claire Cody </p>
-    <p> Operating as StudioCeiz</p>
+    <p class="myScript"> &copy Claire Cody </p>
+    <p class="myScript"> Operating as StudioCeiz</p>
     <figure>
       <img src="./personal-logo.png" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def;">
     </figure>
