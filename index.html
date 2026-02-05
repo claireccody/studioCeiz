@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claire Cody — One-Page Digital Studio</title>
   <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
   <style>
 
         @font-face{
@@ -14,6 +16,19 @@
       font-weight: normal;
     font-style: normal;
     }
+
+    canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1; /* pushes it behind all content */
+}
+
+html{
+  scroll-behavior: smooth;
+}
     .myScript{
       font-family: 'MyScript', sans-serif !important;
       
@@ -29,7 +44,10 @@
       font-family: 'MyScript', sans-serif;
       font-size:larger;
     }
-    body {
+    ul{
+      list-style-type: none;
+    }
+     body {
       margin: 0;
       line-height: 1.6;
       color: #111;
@@ -45,6 +63,7 @@
     h1,
     h2,
     h3 {
+      font-weight: 300;
       line-height: 1.2;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
@@ -70,7 +89,7 @@
 
     .cta {
       margin-top: 2rem;
-      font-weight: 600;
+      /* font-weight: 600; */
     }
 
     .contact{
@@ -85,9 +104,10 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      background-color: #190c5dcc;
-      box-shadow: 0px 4px 12px #190c5d99;
+      background-color: #190c5d;
+      box-shadow: 0px 0 12px 16px #00000044;
       color: white;
+      border: .5px solid #ffffff44;
     }
 
     .logo{
@@ -109,8 +129,9 @@
       padding: 4px;
       border-radius: 4px;
       color: #190c5def;
-      box-shadow: 0 2px 4px white;
+      box-shadow: 0 0 4px .5px white;
       font-weight: bold;
+      border: .5px solid #190c5d77
     }
     .link:hover{
       box-shadow: none;
@@ -124,8 +145,13 @@
     .logo__img--wrapper{
       background-color: #ffffff;
       max-height: 80px;
+      box-shadow:0 0 8px 2px #00000044;
+      border: .1px solid black;
     }
 
+    .offer_A{
+      text-align: center;
+    }
     footer{
       width: 100%;
       align-items: center;
@@ -142,14 +168,13 @@
     section{
       border: .1px solid #190c5dd1;
       border-radius: 6px;
-      background-color: #ffffff;
-      box-shadow: 0px 8px 12px #190c5d77;
+      background-color: #ffffffdf;
+      box-shadow: 0px 0 8px 2px #ffffffcc;
       padding: 16px 24px;
 
     }
 
     .purple{
-      font-weight: bold;
       color: #190c5dcc;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
@@ -186,7 +211,7 @@
         <img src="./personal-logo.png" alt="" class="logo__img">
       </figure>
       </a>
-      <h1 class="myScript" style="text-shadow: 0 0 4px #190c5d;"><a href="mailto:studioceiz.contact@gmail.com"> Claire Cody</a></h1>
+      <h1 class="myScript" style="text-shadow: 0 0 4px #000000;"><a href="mailto:studioceiz.contact@gmail.com"> Claire Cody</a></h1>
     </div>
     <div class="sections">
       <ul class="links">
@@ -206,18 +231,18 @@
       <h1>Websites for creatives who <span class="purple">care deeply</span> how their work is <span class="purple">perceived</span>.</h1>
       <p style="text-align: center;">
         I design and build small, intentional websites for artists, studios,
-        and practitioners. Custom, quick, and made <span class="purple">by a creative for creatives</span> who want their work to feel
-        considered—<span class="purple">not templated</span>.
+        and creatives that house portfolios with clarity and care. Custom, quick, and made <span class="purple">by a creative, for creatives</span> who want their work to look
+       and feel at home.
       </p>
 
-      <h2>Who is this for?</h2>
+<br>
+      <h2>Who I work with</h2>
       <p style="text-align: center;">
-      <span class="purple">Artists, designers, yoga teachers, therapists, musicians, and small
-        studios</span> who need a clear, beautiful online presence that reflects
-        the quality of their work.
+      <span class="purple">Tattoo artists, desginers, studios, painters, and all creatives </span> who need a clear, beautiful, and personally unique online presence that honors
+        the quality of their craft.
       </p>
       <p class="cta right">
-        <strong>Want a site that truly showcases your work?</strong>
+        <strong>Ready for a site that feels like YOU?</strong>
         <br>
         <a class="purple contact" href="mailto:studioceiz.contact@gmail.com">Let's build one together.</a>
       </p>
@@ -225,9 +250,9 @@
 
     <section id="offer">
       <div class="offer_A">
-      <h2>What do you get?</h2>
-      <ul>
-        <li><span class="purple">Custom, intentional website:</span> <br>A one-page or small multi-page site designed specifically for your work and your style.</li>
+      <h2>What's included</h2>
+      <ul style="padding-left: 0;">
+        <li><span class="purple">Custom, intentional website</span> <br>A one-page or small multi-page site designed specifically for your work and your style.</li>
         <li><span class="purple">Seamless experience for all visitors</span> <br>Your website will look beautiful and be easy to navigate on phones, tablets, and desktops. </li>
         <li><span class="purple">Simple setup and launch</span> <br>I handle hosting, domain connection, and the technical details so you don’t have to worry.</li>
         <li><span class="purple">Clear, organized presentation</span> <br> Your work, services, or offerings are displayed in a way that’s easy for visitors to understand and act on.</li>
@@ -272,6 +297,8 @@
       <img src="./personal-logo.png" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def;">
     </figure>
   </footer>
+  <script src="sketch.js"></script>
+
 </body>
 
 
