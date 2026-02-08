@@ -8,7 +8,6 @@
   <script async src="https://tally.so/widgets/embed.js"></script>
   <meta name="description" content="Clean, intentional websites for creatives, artists, and practitioners." />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-  <script src="./dyamics.js"></script>
   <style>
 
         @font-face{
@@ -160,10 +159,13 @@ html{
     }
 
     .offer_A, .process, .audience, .bio{
-      text-align: center;
+      /* text-align: center; */
       background-color: #190c5d22;
       border-radius: 8px;
-      padding: 4px;
+      padding: 8px;
+    }
+    .offer_A{
+      text-align: center;
     }
     footer{
       width: 100%;
@@ -212,7 +214,6 @@ html{
       border-radius: 8px;
       border: solid 2px #190c5d;
       position:fixed;
-      z-index: 2;
       min-height: 80vh;
       min-width: 500px;
       max-width: 720px;
@@ -225,14 +226,26 @@ html{
       justify-content: center;
     }
 
-    #main, .sect{transition:all 300ms ease;}
+    #main, .sect{
+      transition:all 300ms ease;
+    }
+    .sect, footer{z-index: 1}
 
     .hide{
       opacity: 0;
       max-height: 20vh;
+      z-index: -1;
     }
+    .seek{
+      opacity: 100%;
+      z-index: 1;
+    }
+
     .low{
-      opacity: 00%;
+      opacity: 0%;
+    }
+    #openFormA:hover, #openFormB:hover, #openFormC:hover, #exit:hover{
+      cursor: pointer;
     }
 
     @media (max-width: 720px){
@@ -271,11 +284,11 @@ html{
         <!-- <li class="link"><a href="#home">Home</a></li> -->
         
         <li class="link" id="openFormC"><a> Build With Me!</a></li>
-        <script>
+        <!-- <script>
           document.getElementById("openFormC").addEventListener("click", ()=>{
             modalToggle();
           })
-        </script>
+        </script> -->
         <li class="link opt"><a  href="#offer">Service</a></li>
         <li class="link opt"><a  href="#about">About
         </a></li>
@@ -288,11 +301,11 @@ html{
   </header>
       <div id="form" class="hide" style="display: flex; flex-direction: column;">
       <iframe   data-tally-src="https://tally.so/r/rjPezl" width="100%" height="500px"  frameborder="0" marginheight="0" marginwidth="0" title="Digital Studio Intake Questionnaire"></iframe>
-      <button class="myScript" style="color: white;" onclick="modalToggle()" style="margin-top: 8px;">EXIT FORM</button>
+      <button id="exit" class="myScript" style="color: white;" onclick="modalToggle()" style="margin-top: 8px;">EXIT FORM</button>
     </div>
 
   <main id="main">
-    <section id="home" class="sect">
+    <section id="home" class="sect seek">
       <h1>Websites for creatives who <span class="purple">care deeply</span> how their work is <span class="purple">perceived</span>.</h1>
       <p style="text-align: center;">
         I design and build small, intentional websites for artists, studios,
@@ -304,7 +317,7 @@ html{
       <div class="audience">
       <h2>Who I work with</h2>
       <p style="text-align: center;">
-      <span class="purple">Tattoo artists, desginers, studios, painters, and all creatives </span> who need a clear, beautiful, and personally unique online presence that honors
+      <span class="purple myScript"><strong> Tattoo artists, desginers, studios, painters, and all creatives</strong> </span> who need a clear, beautiful, and personally unique online presence that honors
         the quality of their craft.
       </p>
       </div>
@@ -313,24 +326,25 @@ html{
         <br>
 
         <button class="purple contact" id="openFormA">Let's build one together.</button>
-          <script>
+
+      </p>
+                <!-- <script>
           document.getElementById("openFormA").addEventListener("click", ()=>{
 
             modalToggle();
           })
-        </script>
-      </p>
+        </script> -->
     </section>
 
-    <section id="offer" class="sect">
+    <section id="offer" class="sect seek">
 
         <div class="offer__B">
       <h2>Process</h2>
       <ol class="process">
-        <li> <span class="purple">Quick Intake: </span>We’ll chat about your work, goals, and what you want your website to do.</li>
-        <li> <span class="purple">Design & Build: </span>I create a custom, polished site tailored to your style and audience.</li>
-        <li> <span class="purple">Revision: </span>One round of edits to make sure everything is just right.</li>
-        <li> <span class="purple">Launch: </span>Your site goes live — I handle domain connection and hosting so you can start sharing immediately.</li>
+        <li> <strong style="font-size: larger;" class="purple myScript">Quick Intake: </strong>We’ll chat about your work, goals, and what you want your website to do.</li>
+        <li> <strong style="font-size: larger;" class="purple myScript">Design & Build: </strong>I create a custom, polished site tailored to your style and audience.</li>
+        <li> <strong style="font-size: larger;" class="purple myScript">Revision: </strong>One round of edits to make sure everything is just right.</li>
+        <li> <strong style="font-size: larger;" class="purple myScript">Launch: </strong>Your site goes live — I handle domain connection and hosting so you can start sharing immediately.</li>
       </ol>
     </div>
     <hr>
@@ -348,7 +362,7 @@ html{
     </div>
     </section>
 
-    <section id="about" class="myScript sect">
+    <section id="about" class="myScript sect seek">
       <h2 class="myScript" >About <span style="color:#190c5def; text-decoration: underline;">Claire Cody</span></h2>
       <p class="bio" style="text-align: center;">
         I’m a <span class="purple myScript">creative technologist & digital designer</span> with a background in <span class="purple myScript">front-end development, 
@@ -371,12 +385,14 @@ html{
       <img src="./assets/personal-logo.png" alt="" class="logo__img" style="margin: 0 auto;background-color: white;box-shadow: 0 2px 4px #190c5def;">
     </figure>
   </footer>
-  <script src="sketch.js"></script>
-                      <script>
+    <!-- <script>
           document.getElementById("openFormB").addEventListener("click", ()=>{
             modalToggle();
           })
-    </script>
+    </script> -->
+  <script src="sketch.js"></script>
+  <script src="./dyamics.js"></script>
+
 </body>
 
 
