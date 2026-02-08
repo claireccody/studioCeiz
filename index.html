@@ -159,8 +159,11 @@ html{
       border: .1px solid black;
     }
 
-    .offer_A{
+    .offer_A, .process, .audience, .bio{
       text-align: center;
+      background-color: #190c5d22;
+      border-radius: 8px;
+      padding: 4px;
     }
     footer{
       width: 100%;
@@ -179,7 +182,7 @@ html{
       border: .1px solid #190c5dd1;
       border-radius: 6px;
       background-color: #ffffffdf;
-      box-shadow: 0px 0 8px 2px #ffffffcc;
+      box-shadow: 0px 0 16px 2px #ffffffcc;
       padding: 16px 24px;
 
     }
@@ -204,14 +207,14 @@ html{
 
     #form{
       padding: 16px 16px 0px 16px;
-      background-image: linear-gradient( to top, #190c5d,#190c5dde, #190c5dcc, #ffffff44);
+      background-image: linear-gradient( to bottom, #190c5d,#190c5dde, #ffffff77, #190c5dcc);
       box-shadow: 0px 0 8px 2px #ffffffcc;
       border-radius: 8px;
       border: solid 2px #190c5d;
-      position: absolute;
+      position:fixed;
       z-index: 2;
       min-height: 80vh;
-      min-width: 400px;
+      min-width: 500px;
       max-width: 720px;
       top: 50%;
       left: 50%;
@@ -226,12 +229,25 @@ html{
 
     .hide{
       opacity: 0;
-      max-height: 30vh;
+      max-height: 20vh;
+    }
+    .low{
+      opacity: 00%;
     }
 
-      @media (max-width: 600px){
+    @media (max-width: 720px){
+      #form{
+        min-width:400px;
+      }
 
       .link{
+        font-size: small;
+        text-align: center;
+      }
+    }
+      @media (max-width: 650px){
+
+      .link.opt{
         display: none;
       }
 
@@ -242,7 +258,7 @@ html{
 </head>
 
 <body>
-  <header>
+  <header id="top">
     <div class="logo"><a href="mailto:studioceiz.contact@gmail.com">
       <figure class="logo__img--wrapper">
         <img src="./assets/personal-logo.png" alt="" class="logo__img">
@@ -253,18 +269,26 @@ html{
     <div class="sections">
       <ul class="links">
         <!-- <li class="link"><a href="#home">Home</a></li> -->
-        <li class="link"><a  href="#offer">Offer</a></li>
-        <li class="link"><a  href="#about">About</a></li>
-        <li class="link">
-          <a class="contact" href="mailto:studioceiz.contact@gmail.com">CONTACT</a>
-        </li>
+        
+        <li class="link" id="openFormC"><a> Build With Me!</a></li>
+        <script>
+          document.getElementById("openFormC").addEventListener("click", ()=>{
+            modalToggle();
+          })
+        </script>
+        <li class="link opt"><a  href="#offer">Service</a></li>
+        <li class="link opt"><a  href="#about">About
+        </a></li>
+        <!-- <li class="link">
+          <a class="contact" href="mailto:studioceiz.contact@gmail.com">E-Mail</a>
+        </li> -->
       </ul>
       
     </div>
   </header>
       <div id="form" class="hide" style="display: flex; flex-direction: column;">
-      <iframe   data-tally-src="https://tally.so/r/rjPezl" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0" title="Digital Studio Intake Questionnaire"></iframe>
-        <button class="link" onclick="modalToggle()">EXIT FORM</button>
+      <iframe   data-tally-src="https://tally.so/r/rjPezl" width="100%" height="500px"  frameborder="0" marginheight="0" marginwidth="0" title="Digital Studio Intake Questionnaire"></iframe>
+      <button class="myScript" style="color: white;" onclick="modalToggle()" style="margin-top: 8px;">EXIT FORM</button>
     </div>
 
   <main id="main">
@@ -277,21 +301,41 @@ html{
       </p>
 
 <br>
+      <div class="audience">
       <h2>Who I work with</h2>
       <p style="text-align: center;">
       <span class="purple">Tattoo artists, desginers, studios, painters, and all creatives </span> who need a clear, beautiful, and personally unique online presence that honors
         the quality of their craft.
       </p>
+      </div>
       <p class="cta right">
         <strong>Ready for a site that feels like YOU?</strong>
         <br>
-        <button class="purple contact" onclick="modalToggle()">Let's build one together.</a>
+
+        <button class="purple contact" id="openFormA">Let's build one together.</button>
+          <script>
+          document.getElementById("openFormA").addEventListener("click", ()=>{
+
+            modalToggle();
+          })
+        </script>
       </p>
     </section>
 
     <section id="offer" class="sect">
+
+        <div class="offer__B">
+      <h2>Process</h2>
+      <ol class="process">
+        <li> <span class="purple">Quick Intake: </span>We’ll chat about your work, goals, and what you want your website to do.</li>
+        <li> <span class="purple">Design & Build: </span>I create a custom, polished site tailored to your style and audience.</li>
+        <li> <span class="purple">Revision: </span>One round of edits to make sure everything is just right.</li>
+        <li> <span class="purple">Launch: </span>Your site goes live — I handle domain connection and hosting so you can start sharing immediately.</li>
+      </ol>
+    </div>
+    <hr>
       <div class="offer_A">
-      <h2>What's included</h2>
+      <!-- <h2>What's included</h2> -->
       <ul style="padding-left: 0;">
         <li><span class="purple">Custom, intentional website</span> <br>A one-page or small multi-page site designed specifically for your work and your style.</li>
         <li><span class="purple">Seamless experience for all visitors</span> <br>Your website will look beautiful and be easy to navigate on phones, tablets, and desktops. </li>
@@ -302,21 +346,11 @@ html{
 
       </ul>
     </div>
-    <br>
-    <div class="offer__B">
-      <h2>Process</h2>
-      <ol class="process">
-        <li> <span class="purple">Quick Intake: </span>We’ll chat about your work, goals, and what you want your website to do.</li>
-        <li> <span class="purple">Design & Build: </span>I create a custom, polished site tailored to your style and audience.</li>
-        <li> <span class="purple">Revision: </span>One round of edits to make sure everything is just right.</li>
-        <li> <span class="purple">Launch: </span>Your site goes live — I handle domain connection and hosting so you can start sharing immediately.</li>
-      </ol>
-    </div>
     </section>
 
     <section id="about" class="myScript sect">
       <h2 class="myScript" >About <span style="color:#190c5def; text-decoration: underline;">Claire Cody</span></h2>
-      <p style="text-align: center;">
+      <p class="bio" style="text-align: center;">
         I’m a <span class="purple myScript">creative technologist & digital designer</span> with a background in <span class="purple myScript">front-end development, 
         graphic design, creative digital interactivity, and analog art</span>. I focus on visual clarity, structure, and stable systems that ensure
         your work is presented in a way that feels professional, accessible, and <span class="purple myScript">true to your style</span>. 
@@ -328,8 +362,9 @@ html{
 
 
   </main>
-  <footer >
-    <a class="cta purple contact" onclick="modalToggle()" href="#">Start a project!</a>
+  <footer id="footer">
+
+    <a class="cta purple contact" id="openFormB">Start a project!</a>
     <p class="myScript"> &copy Claire Cody </p>
     <p class="myScript"> Operating as StudioCeiz</p>
     <figure>
@@ -337,8 +372,13 @@ html{
     </figure>
   </footer>
   <script src="sketch.js"></script>
-
+                      <script>
+          document.getElementById("openFormB").addEventListener("click", ()=>{
+            modalToggle();
+          })
+    </script>
 </body>
+
 
 
 </html>
