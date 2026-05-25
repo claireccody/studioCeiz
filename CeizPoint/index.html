@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceiz Point</title>
+    <style>
+        header{
+            display: flex;
+            height: 200px;
+            width: 100%;
+            justify-content: center;
+        }
+         header img{
+            height: 200px;
+            z-index: 100;
+            /* border: 1px solid #dc151c; */
+         }
+        body{
+            justify-content: center;
+            background: #f6f5e6;
+            background-image: linear-gradient(#f6f5e6cc, #f6f5e6cc), url('./assets/CeizPointLOGO.png');
+            background-size: cover;
+        }
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        .companies{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            height:100vh;
+            width: 75vh;
+            justify-content: center;      
+            box-shadow: 0 0 64px 2px black;
+        }
+        .company{
+            border: solid black 1px;
+            background: white;
+            transition: all ease 200ms;
+        }
+
+        .company:hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 16px 2px black;
+            z-index: 101;
+        }
+    </style>
+</head>
+<body>
+    
+        <header>
+        <img src="./assets/CeizPointLOGO.png" alt="">
+        </header>
+    <main>
+        <div class="companies">
+        <div class="company" id="A"><a href=""></a></div>
+        <div class="company" id="B"><a href=""></a></div>
+        <div class="company" id="C"><a href=""></a></div>
+        <div class="company" id="D"><a href=""></a></div>
+        <div class="company" id="E"><a href=""></a></div>
+        <div class="company" id="F"><a href=""></a></div>
+        </div>
+    </main>
+        <!-- <footer>
+        <img src="./assets/CeizPointLOGO.png" alt="">
+        </footer> -->
+</body>
+</html>
