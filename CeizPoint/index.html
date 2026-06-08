@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceiz Point</title>
     <style>
+        *{
+            margin:0;
+            padding:0;
+        }
         header{
             display: flex;
             height: 200px;
-            width: 100%;
-            justify-content: center;
+            MAX-width: fit-content;
+            margin: 0 auto;
+            justify-content: space-around;
         }
          header img{
-            height: 200px;
+            max-width:100vw;
             z-index: 100;
-            /* border: 1px solid #dc151c; */
+            border: 1px solid #37473f;
          }
         body{
             justify-content: center;
             background: #f6f5e6;
-            background-image: linear-gradient(#f6f5e6cc, #f6f5e6cc), url('./assets/CeizPointLOGO.png');
+            background-image: linear-gradient(#f6f5e6ef, #f6f5e6ef), url('./assets/topgraphic.png');
             background-size: cover;
         }
         main{
+            margin: 16px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
         }
         .company__link{
@@ -51,25 +58,112 @@
             box-shadow: 0 0 16px 2px black;
             z-index: 101;
         }
+        section{
+            min-width: fit-content;
+            margin: 0 auto;
+            
+        }
+
+        #TravelCollective{
+                box-shadow: 0 0 16px 1px #37473f;
+            border: 1px solid #cc4e00;
+            width: 100%;
+        }
+        #TravelCollective:hover{
+                box-shadow: 0 0 16px 1px #cc4e00;
+            border: 1px solid #37473f;
+            width: 100%;
+            transform: scale(.95);
+        }
+
+        #anchor{
+            background-color: #37473f;
+            max-height: 340px;
+            margin: 16px;
+            width: 100%;
+
+        }
+        #top{
+            display: flex;
+            flex-direction: row;
+            max-height: min-content;
+            display: flex;
+        }
+        .travel-collective, .anchor-partner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bottom{
+            max-width: 900px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #bottom a img{
+            width: 100%;
+            margin: 0 auto;
+        }
+        #bottom a{
+            margin: 8px;
+        }
+        #bottom-links{
+            margin: 0 auto;
+            width: 100%;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #bottom a img:hover, #anchor:hover{
+            border: 1px solid #cc4e00;
+                            box-shadow: 0 0 16px 1px #37473f;
+            border: 1px solid #cc4e00;
+            transform: scale(1.1);
+        }
+
+        #footer{
+            width: 100vw;
+            margin:0 auto;
+            max-width: 1200px;
+            justify-self: center;
+
+        }
+        footer{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
     </style>
 </head>
 <body>
     
         <header>
-        <img src="./assets/CeizPointLOGO.png" alt="">
+        <img src="./assets/Eugene Header.png" alt="">
         </header>
     <main>
-        <div class="companies">
-        <div class="company" id="A"><a class="company__link" href="https://collective-annabelle-b3xgu667.dcms.site/" target="_blank"></a></div>
-        <div class="company" id="B"><a class="company__link" href=""></a></div>
-        <div class="company" id="C"><a class="company__link" href=""></a></div>
-        <div class="company" id="D"><a class="company__link" href=""></a></div>
-        <div class="company" id="E"><a class="company__link" href=""></a></div>
-        <div class="company" id="F"><a class="company__link" href=""></a></div>
-        </div>
+       <section id="top">
+            <a class="travel-collective" href=""><img id="TravelCollective" src="./assets/Travel Collective Component - source.png" alt=""></a>
+            <a href="" class="anchor-partner"><img src="./assets/companyCards/Alora-Logo-286-29-1920w.webp" alt="" id="anchor"></a>
+        </section>
+       <!-- <a href=""><img src="./assets/AloraADSpace.png" alt=""></a> -->
+        <section id="bottom">
+            <div id="bottom-links">
+            <a href=""><img src="./assets/companyCards/bar Purlieu.png" alt=""></a>
+            <a href=""><img src="./assets/companyCards/KC.png" alt=""></a>
+            <a href=""><img src="./assets/companyCards/Envi.png" alt=""></a>
+       </div>
+        </section>
+
     </main>
-        <!-- <footer>
-        <img src="./assets/CeizPointLOGO.png" alt="">
-        </footer> -->
+    <footer>
+    <img id="footer" src="./assets/CeizPoint(5).png" alt="">
+</footer>
 </body>
 </html>
