@@ -24,7 +24,7 @@
         body{
             justify-content: center;
             background: #f6f5e6;
-            background-image: linear-gradient(#f6f5e6ef, #f6f5e6ef), url('./assets/topgraphic.png');
+            background-image: linear-gradient(to right, #8aa59e9d, #8aa59e, #8aa59e, #8aa59e, #8aa59e9d), url('./assets/topgraphic.png');
             background-size: cover;
         }
         main{
@@ -32,32 +32,9 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-        .company__link{
-            display: flex;
-            width: 100%;
-            height: 100%;
-            z-index: 102;
-        }
-        .companies{
-            display:grid;
-            grid-template-columns: 1fr 1fr;
-            height:100vh;
-            width: 75vh;
-            justify-content: center;      
-            box-shadow: 0 0 64px 2px black;
-        }
-        .company{
-            border: solid black 1px;
-            background: white;
-            transition: all ease 200ms;
+            min-width:95vw;
         }
 
-        .company:hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 16px 2px black;
-            z-index: 101;
-        }
         section{
             min-width: fit-content;
             margin: 0 auto;
@@ -67,36 +44,18 @@
         #TravelCollective{
                 box-shadow: 0 0 16px 1px #37473f;
             border: 1px solid #cc4e00;
-            width: 100%;
+            /* width: 100%; */
         }
         #TravelCollective:hover{
                 box-shadow: 0 0 16px 1px #cc4e00;
             border: 1px solid #37473f;
-            width: 100%;
+            /* width: 100%; */
             transform: scale(.95);
         }
+   
 
-        #anchor{
-            background-color: #37473f;
-            max-height: 340px;
-            margin: 16px;
-            width: 100%;
-
-        }
-        #top{
-            display: flex;
-            flex-direction: row;
-            max-height: min-content;
-            display: flex;
-        }
-        .travel-collective, .anchor-partner{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #bottom{
-            max-width: 900px;
+        #bottom, #top{
+            
             margin: 0 auto;
             width: 100%;
             display: flex;
@@ -104,14 +63,17 @@
             align-items: center;
 
         }
-        #bottom a img{
+        #bottom a img, #bottom a img{
             width: 100%;
             margin: 0 auto;
+            border: 1px solid #324f48;
         }
-        #bottom a{
+        #bottom a, #top a{
             margin: 8px;
+            width: fit-content;
         }
-        #bottom-links{
+        #bottom-links,#top-links{
+            max-width: 1150px;
             margin: 0 auto;
             width: 100%;
              display: flex;
@@ -129,7 +91,7 @@
         #footer{
             width: 100vw;
             margin:0 auto;
-            max-width: 1200px;
+            max-width: 1150px;
             justify-self: center;
 
         }
@@ -148,9 +110,11 @@
         <img src="./assets/Eugene Header.png" alt="">
         </header>
     <main>
-       <section id="top">
-            <a class="travel-collective" href=""><img id="TravelCollective" src="./assets/Travel Collective Component - source.png" alt=""></a>
-            <a href="https://alorawellnessspa.com/" class="anchor-partner"><img src="./assets/companyCards/Alora-Logo-286-29-1920w.webp" alt="" id="anchor"></a>
+         <section id="bottom">
+            <div id="bottom-links">
+            <a href="/"><img src="./assets/companyCards/CPTC.png" alt=""></a>
+            <a href="https://alorawellnessspa.com/"><img max-width="600px" src="./assets/companyCards/Alora.png" alt=""></a>
+       </div>
         </section>
        <!-- <a href=""><img src="./assets/AloraADSpace.png" alt=""></a> -->
         <section id="bottom">
