@@ -7,38 +7,49 @@
     <title>Ceiz Point</title>
     <script async src="https://tally.so/widgets/embed.js"></script>
     <style>
-        body{
+        body {
             background: #f6f5e6;
         }
-        .container{
+
+        .container {
             display: flex;
             max-width: 100vw;
+            flex-direction: column;
         }
-        button{
+
+        button {
             background: none;
             border: none;
         }
-        img:hover{
-            box-shadow:  0px 0px 4px 2px #cc4e00;
+
+        img:hover {
+            box-shadow: 0px 0px 4px 2px #cc4e00;
         }
-        .row{
+
+        .row {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             max-height: 100vh;
             max-width: 100%;
             justify-content: center;
             align-items: center;
+            height: 70%;
         }
 
-        .row .join, .row .recommend{
+        .row .join,
+        .row .recommend {
             display: flex;
             width: 50%;
             margin: 8px;
         }
 
-        img{
+        img {
             display: flex;
             width: 100%;
+        }
+        a{
+            display: flex;
+            height: 30%;
         }
     </style>
 </head>
@@ -47,7 +58,7 @@
 
     <div class="container">
         <div class="row">
-            
+
             <div class="join">
                 <button data-tally-open="ZjeBNa" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">
                     <img src="./Join.png" alt="">
@@ -56,12 +67,14 @@
             </div>
             <div class="recommend">
 
-<button data-tally-open="jagbP4" data-tally-emoji-text="👋" data-tally-emoji-animation="wave"><img src="./recommend.png" alt=""></button>
+                <button data-tally-open="jagbP4" data-tally-emoji-text="👋" data-tally-emoji-animation="wave"><img
+                        src="./recommend.png" alt=""></button>
 
             </div>
-<a href="/CeizPoint/Eugene/index.html">
-            <img src="./Eugene/assets/Eugene Header.png" alt=""></a>
+            
         </div>
+        <a href="/CeizPoint/Eugene/index.html">
+                <img src="./Eugene/assets/Eugene Header.png" alt=""></a>
     </div>
 </body>
 
